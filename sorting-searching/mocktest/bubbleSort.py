@@ -12,8 +12,8 @@ def bubbleSort(A):
 		return A
 
 	for i in range(n-1):
-		for j in range(n-1-i):
-			if A[j] > A[j+1]:
-				A[j], A[j+1] = A[j+1], A[j]
+		for j in range(1, n-i):
+			if A[j-1] > A[j]:
+				A[j-1], A[j] = A[j], A[j-1]
 	return A
 
